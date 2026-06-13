@@ -1,0 +1,162 @@
+/* ================= CONFIGURAÇÃO GERAL DA PÁGINA ================= */
+body {
+  font-family: Arial; /* Define a fonte padrão */
+  background: linear-gradient(135deg, #6ec6ff, #b388ff); /* Fundo com gradiente colorido */
+  text-align: center; /* Centraliza o conteúdo */
+  color: #333; /* Cor padrão do texto */
+}
+
+/* ================= CONTAINER PRINCIPAL ================= */
+/* Caixa branca onde fica o conteúdo do jogo */
+.container {
+  background: white;
+  padding: 25px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 20px; /*Cantos arredondados */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Sombra para dar efeito de "cartão" */
+} 
+
+/* ================= TÍTULO ================= */
+h1 {
+  color: #ff4081; /* Rosa chamativo para atrair atenção */
+}
+
+/* ================= BOTÕES DAS OPERAÇÕES ================= */
+.botoes button {
+  font-size: 20px;
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background: #ffd740; /* Amarelo vibrante */
+  cursor: pointer; /* Muda o cursor ao passar o mouse */
+  transition: 0.3s; /* Animação suave */
+}
+
+/* Efeito ao passar o mouse */
+.botoes button:hover {
+  background: #ffab00;
+  transform: scale(1.1); /* Aumenta levemente o botão */
+}
+
+/* ================= FUNDO ANIMADO ================= */
+/* Base das camadas de fundo */
+.bg {
+  position: fixed; /* Fixa no fundo da tela */
+  width: 300%;
+  height: 300%;
+  top: -100%;
+  left: -100%;
+  background-repeat: repeat; /* Repete os ícones */
+  background-size: 80px; /* Tamanho dos ícones */
+  opacity: 0.05; /* Deixa bem suave */
+  z-index: -1; /* Fica atrás de tudo */
+}
+
+/* ================= CAMADAS DO FUNDO ================= */
+/* Cada camada usa um ícone diferente */
+
+/* Ícone de adição */
+.camada1 {
+  background-image: url("assets/adicionar.png");
+  animation: girar1 180s linear infinite; /* Gira lentamente */
+}
+
+/* Ícone de subtração */
+.camada2 {
+  background-image: url("assets/sinal-de-menos.png");
+  animation: girar2 220s linear infinite; /* Velocidade diferente */
+}
+
+/* Ícone de divisão */
+.camada3 {
+  background-image: url("assets/divisao.png");
+  animation: girar3 260s linear infinite;
+}
+
+/* ================= ANIMAÇÕES ================= */
+/* Cada camada gira em um sentido diferente */
+
+/* Rotação normal */
+@keyframes girar1 {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Rotação inversa */
+@keyframes girar2 {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+/* Rotação contrária */
+@keyframes girar3 {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+/* ================= INPUT ================= */
+/* Campo onde o usuário digita a resposta */
+input {
+  padding: 10px;
+  margin-top: 10px;
+  width: 80%;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+/* ================= BOTÕES GERAIS ================= */
+/* Botões padrão do sistema */
+button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #69f0ae; /* Verde (ação positiva) */
+  cursor: pointer;
+}
+
+/* Efeito hover dos botões */
+button:hover {
+  background: #00e676;
+}
+
+body {
+  margin: 0;
+  padding: 10px;
+}
+
+input {
+  width: 90%;
+  max-width: 350px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 90%;
+  max-width: 350px;
+  font-size: 16px;
+}
+
+.botoes button {
+  width: auto;
+  min-width: 60px;
+}
+
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+}

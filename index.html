@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matemática Divertida</title>
+
+  <!-- Importa o arquivo de estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= FUNDO ANIMADO ================= -->
+<!-- Camadas de fundo com ícones matemáticos -->
+<div class="bg camada1"></div>
+<div class="bg camada2"></div>
+<div class="bg camada3"></div>
+
+<!-- ================= TELA DE LOGIN ================= -->
+<div id="login" class="container">
+  <h1>🧮 Matemática Divertida</h1>
+
+<p>
+Jogue, pratique matemática e depois deixe sua avaliação ⭐
+</p>
+
+  <!-- Campos para identificação do aluno -->
+  <input type="text" id="nome" placeholder="Digite seu nome"><br>
+
+  <!-- Botão para entrar no sistema -->
+  <button onclick="entrar()">Entrar 🚀</button>
+</div>
+
+<!-- ================= TELA DO JOGO ================= -->
+<!-- Inicialmente escondida -->
+<div id="jogo" class="container" style="display:none;">
+  <h1>🎮 Matemática Divertida</h1>
+
+  <!-- Mostra informações do usuário -->
+  <p id="usuario"></p>
+
+  <!-- ================= ESCOLHA DA OPERAÇÃO ================= -->
+  <p>Escolha a operação:</p>
+  <div class="botoes">
+    <button onclick="setOperacao('+')">➕</button>
+    <button onclick="setOperacao('-')">➖</button>
+    <button onclick="setOperacao('*')">✖</button>
+    <button onclick="setOperacao('/')">➗</button>
+  </div>
+
+  <!-- ================= ESCOLHA DO NÍVEL ================= -->
+  <p>Escolha o nível:</p>
+  <div class="botoes nivel">
+    <button onclick="setNivel('facil')">😊 Fácil</button>
+    <button onclick="setNivel('medio')">😐 Médio</button>
+    <button onclick="setNivel('dificil')">😈 Difícil</button>
+  </div>
+
+  <!-- ================= TEMPO ================= -->
+  <!-- Mostra o tempo restante para responder -->
+  <p>⏱️ Tempo: <span id="tempo">10</span>s</p>
+
+  <!-- ================= PERGUNTA ================= -->
+  <p>Resolva a conta 👇</p>
+
+  <!-- Onde aparece a conta matemática -->
+  <h2 id="pergunta"></h2>
+
+  <!-- Campo de resposta -->
+  <input type="number" id="resposta" placeholder="Digite aqui">
+
+  <!-- Botão para verificar resposta -->
+  <button onclick="verificar()">Responder ✅</button>
+
+  <!-- Resultado (acertou ou errou) -->
+  <p id="resultado"></p>
+
+  <!-- Pontuação do jogador -->
+  <p>Pontos: <span id="pontos">0</span></p>
+  <p>✅ Acertos: <span id="acertos">0</span></p>
+  <p>❌ Erros: <span id="erros">0</span></p>
+
+  <!-- ================= AÇÕES ================= -->
+
+  <!-- Salva o desempenho do aluno -->
+  <button onclick="salvarResultado()">Salvar Resultado 💾</button>
+
+  <hr>
+
+  <!-- ================= RANKING ================= -->
+  <h3>🏆 Ranking</h3>
+
+  <!-- Exibe os melhores resultados -->
+  <div id="ranking"></div>
+
+<hr>
+
+<button onclick="window.open('https://forms.gle/WShUM4q3su5CobVi9', '_blank')">
+⭐ Avaliar o Jogo
+</button>
+
+
+<h3>📋 Relatório de Acessos</h3>
+
+<button onclick="verAcessos()">
+Ver Acessos 👥
+</button>
+
+<div id="acessos"></div>
+
+  <!-- ================= TROCAR USUÁRIO ================= -->
+  <!-- Permite que outro aluno utilize o sistema -->
+  <button onclick="sair()">🔄 Trocar aluno</button>
+  
+</div>
+
+<!-- Importa o JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
